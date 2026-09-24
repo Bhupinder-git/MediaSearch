@@ -187,6 +187,7 @@ PORT=4000
 CLIENT_URL=https://your-frontend-domain.com
 MONGODB_URL=your_mongodb_connection_string
 JWT_SECRET=your_production_secret
+COOKIE_SECURE=true
 ```
 
 Configure MongoDB Atlas network access for the backend host, and use a production JWT secret. Do not expose `MONGODB_URL` or `JWT_SECRET` in frontend variables.
