@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+* {
+  user-select: none;
+}
+
+/* ===== Google Fonts (imported via index.html link tags) ===== */
+
+/* ===== Stitch Design System Tokens ===== */
+@theme {
+  /* --- Colors --- */
+  --color-primary: #0c0a08;
+  --color-primary-container: #23211e;
+  --color-primary-fixed: #e7e1dc;
+  --color-primary-fixed-dim: #cbc6c1;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #1d1b18;
+  --color-on-primary-fixed-variant: #494643;
+  --color-on-primary-container: #8c8884;
+  --color-inverse-primary: #cbc6c1;
+
+  --color-secondary: #934a2f;
+  --color-secondary-container: #ffa180;
+  --color-secondary-fixed: #ffdbcf;
+  --color-secondary-fixed-dim: #ffb59c;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #390c00;
+  --color-on-secondary-fixed-variant: #75331a;
+  --color-on-secondary-container: #78351c;
+
+  --color-tertiary: #0a0a0b;
+  --color-tertiary-container: #212122;
+  --color-tertiary-fixed: #e4e2e3;
+  --color-tertiary-fixed-dim: #c8c6c7;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #1b1b1c;
+  --color-on-tertiary-fixed-variant: #474647;
+  --color-on-tertiary-container: #898889;
+
+  --color-surface: #fbf9f4;
+  --color-surface-bright: #fbf9f4;
+  --color-surface-dim: #dbdad5;
+  --color-surface-card: #ffffff;
+  --color-surface-subtle: #efece4;
+  --color-surface-variant: #e4e2dd;
+  --color-surface-container: #f0eee9;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container-high: #eae8e3;
+  --color-surface-container-highest: #e4e2dd;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-tint: #615e5a;
+  --color-on-surface: #1b1c19;
+  --color-on-surface-variant: #4a463f;
+  --color-inverse-surface: #30312e;
+  --color-inverse-on-surface: #f2f1ec;
+
+  --color-background: #fbf9f4;
+  --color-on-background: #1b1c19;
+  --color-canvas-base: #f7f5f0;
+
+  --color-outline: #7c766e;
+  --color-outline-variant: #cdc5bc;
+  --color-border-subtle: #e4dfd5;
+  --color-border-strong: #c8c2b5;
+
+  --color-text-primary: #1f1d1a;
+  --color-text-secondary: #635f59;
+  --color-text-muted: #969188;
+
+  --color-accent-terracotta: #8c442a;
+  --color-accent-terracotta-hover: #733620;
+  --color-accent-terracotta-subtle: #f4ede8;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-destructive-crimson: #9e2a2b;
+  --color-destructive-subtle: #fbeeed;
+
+  /* --- Spacing --- */
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-space-2xl: 4rem;
+  --spacing-gutter: 1.25rem;
+  --spacing-gutter-mobile: 0.75rem;
+  --spacing-margin: 2.5rem;
+  --spacing-margin-tablet: 1.5rem;
+  --spacing-margin-mobile: 1rem;
+
+  /* --- Border Radius --- */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* --- Font Family --- */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* --- Font Size (with line-height, letter-spacing, weight) --- */
+  --font-size-label-badge: 11px;
+  --font-size-label-badge--line-height: 14px;
+  --font-size-label-badge--letter-spacing: 0.05em;
+  --font-size-label-badge--font-weight: 600;
+
+  --font-size-label-nav: 14px;
+  --font-size-label-nav--line-height: 20px;
+  --font-size-label-nav--letter-spacing: 0.01em;
+  --font-size-label-nav--font-weight: 500;
+
+  --font-size-label-action: 13px;
+  --font-size-label-action--line-height: 16px;
+  --font-size-label-action--font-weight: 500;
+
+  --font-size-body-sm: 13px;
+  --font-size-body-sm--line-height: 18px;
+  --font-size-body-sm--font-weight: 400;
+
+  --font-size-body-md: 14px;
+  --font-size-body-md--line-height: 20px;
+  --font-size-body-md--font-weight: 400;
+
+  --font-size-body-lg: 16px;
+  --font-size-body-lg--line-height: 24px;
+  --font-size-body-lg--font-weight: 400;
+
+  --font-size-headline-md: 20px;
+  --font-size-headline-md--line-height: 28px;
+  --font-size-headline-md--letter-spacing: -0.01em;
+  --font-size-headline-md--font-weight: 500;
+
+  --font-size-headline-lg: 28px;
+  --font-size-headline-lg--line-height: 36px;
+  --font-size-headline-lg--letter-spacing: -0.015em;
+  --font-size-headline-lg--font-weight: 600;
+
+  --font-size-display-xl: 40px;
+  --font-size-display-xl--line-height: 48px;
+  --font-size-display-xl--letter-spacing: -0.02em;
+  --font-size-display-xl--font-weight: 600;
+
+  --font-size-display-xl-mobile: 30px;
+  --font-size-display-xl-mobile--line-height: 38px;
+  --font-size-display-xl-mobile--letter-spacing: -0.02em;
+  --font-size-display-xl-mobile--font-weight: 600;
+}
+
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+/* Material Symbols variable font settings */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'liga';
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent-terracotta-subtle);
+  color: var(--color-accent-terracotta);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Pulse animation for live indicators */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
